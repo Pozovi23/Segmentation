@@ -77,9 +77,6 @@ def visualise_masks():
             cv2.imwrite(output_path, combined)
 
 
-visualise_masks()
-
-
 def tiff_to_png():
     dataset_path = "dataset"
     pictures_dir = os.path.join(dataset_path, "labels")
