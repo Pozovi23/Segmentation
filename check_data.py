@@ -78,19 +78,15 @@ def visualise_masks():
 
 
 def tiff_to_png():
-    dataset_path = "dataset"
-    pictures_dir = os.path.join(dataset_path, "labels")
-    output_dir = os.path.join(dataset_path, "labels_png")
+    pictures_dir = "/home/gleb/learning/Segmentation/readme_pictures/10078735_15.tiff"
+    output_dir = "/home/gleb/learning/Segmentation/readme_pictures/example_bad_2.png"
 
-    os.makedirs(output_dir)
+    image = cv2.imread(pictures_dir)
+    image = cv2.resize(image, (400, 400))
+    cv2.imwrite(output_dir, image)
 
-    for image_file in os.listdir(pictures_dir):
-        image_path = os.path.join(pictures_dir, image_file)
 
-        image = cv2.imread(image_path)
-
-        output_path = os.path.join(output_dir, image_file[:-3] + "png")
-        cv2.imwrite(output_path, image)
+tiff_to_png()
 
 
 def delete_old_masks():
