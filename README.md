@@ -9,7 +9,7 @@
 
 1) Много фотографий, на которых значительную площадь занимает белый фон:
 
-    ![](https://github.com/Pozovi23/Segmentation/blob/master/readme_pictures/example_bad_1.png)  |  ![](https://github.com/Pozovi23/Segmentation/blob/master/readme_pictures/example_bad_2.png)
+    ![](https://github.com/Pozovi23/Segmentation/blob/master/readme_pictures/example_bad_1.png)    ![](https://github.com/Pozovi23/Segmentation/blob/master/readme_pictures/example_bad_2.png)
     
     Решением данной проблемы является, во-первых, удаление совсем плохих случаев. Но на оставшихся фото всё ещё остаются белые участки. Тогда я подумал, что можно просто вырезать из наших фото отдельные участки. 
     
@@ -23,9 +23,10 @@
     ![](https://github.com/Pozovi23/Segmentation/blob/master/readme_pictures/crop_example.png)
 
 2) Присутствует корявая разметка, например:
+   Дороги где-то явно не должно быть, но она есть
    
-    
-       Ну здесь только переразметка. Переделал где-то 70 суммарно, переразмечал в label studio.
+   
+   Ну здесь только переразметка. Переделал где-то 70 суммарно, переразмечал в label studio.
 
 После этого высчитал среднее по тренировочному датасету и стандартное отклонение.
 
