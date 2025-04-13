@@ -1,0 +1,14 @@
+.venv/
+dataset/
+picture_and_mask/
+pictures_my_half/
+exported_masks/
+articles_data.csv
+label_class_dict.csv
+metadata.csv
+.idea/
+pictures_png/
+weights/
+runs/
+readme.odt
+__pycache__/
