@@ -55,11 +55,10 @@ Loss / validation    |
 
 Тесты проводились не на кропах 224х224, а на изначальных фото 1500х1500.
 
-| Metric     | Value              |
+|    |           |
 |------------|--------------------|
 | **IoU**    | 0.534  |
 | **F1-score**| 0.696  |
 
-Visualisation    |
-:-------------------------:|
-![](https://github.com/Pozovi23/Simpson_classifier/blob/main/pictures/test.png)  | 
+![](https://github.com/Pozovi23/Segmentation/blob/master/segmentations/0.png) ![](https://github.com/Pozovi23/Segmentation/blob/master/segmentations/1.png)
+![](https://github.com/Pozovi23/Segmentation/blob/master/segmentations/2.png) ![](https://github.com/Pozovi23/Segmentation/blob/master/segmentations/3.png)

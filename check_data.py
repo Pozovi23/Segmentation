@@ -78,12 +78,16 @@ def visualise_masks():
 
 
 def tiff_to_png():
-    pictures_dir = "/home/gleb/learning/Segmentation/readme_pictures/inference_explanation.png"
-    output_dir = "/home/gleb/learning/Segmentation/readme_pictures/inference_explanation1.png"
-
-    image = cv2.imread(pictures_dir)
-    image = cv2.resize(image, (400, 400))
-    cv2.imwrite(output_dir, image)
+    pictures_dir = "/home/gleb/learning/Segmentation/segmentations/"
+    output_dir = "/home/gleb/learning/Segmentation/segmentations/"
+    i = 0
+    for file in os.listdir(pictures_dir):
+        image = cv2.imread(pictures_dir + file)
+        image = cv2.resize(image, (400, 400))
+        cv2.imwrite(output_dir + f"{i}.png", image)
+        i += 1
+        if i == 4:
+            break
 tiff_to_png()
 
 def delete_old_masks():
