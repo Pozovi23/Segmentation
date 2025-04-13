@@ -24,7 +24,7 @@
 
 2) Присутствует корявая разметка, например:
    Дороги где-то явно не должно быть, но она есть
-   
+   ![](https://github.com/Pozovi23/Segmentation/blob/master/readme_pictures/bad_label.png)
    
    Ну здесь только переразметка. Переделал где-то 70 суммарно, переразмечал в label studio.
 
