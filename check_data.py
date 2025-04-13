@@ -78,11 +78,11 @@ def visualise_masks():
 
 
 def tiff_to_png():
-    pictures_dir = "/home/gleb/learning/Segmentation/readme_pictures/16978930_15.tiff"
-    output_dir = "/home/gleb/learning/Segmentation/readme_pictures/bad_label.png"
+    pictures_dir = "/home/gleb/learning/Segmentation/readme_pictures/inference_explanation.png"
+    output_dir = "/home/gleb/learning/Segmentation/readme_pictures/inference_explanation1.png"
 
     image = cv2.imread(pictures_dir)
-    image = cv2.resize(image, (800, 400))
+    image = cv2.resize(image, (400, 400))
     cv2.imwrite(output_dir, image)
 tiff_to_png()
 
