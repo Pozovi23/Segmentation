@@ -88,7 +88,7 @@ def tiff_to_png():
         i += 1
         if i == 4:
             break
-tiff_to_png()
+
 
 def delete_old_masks():
     path = "/home/gleb/learning/Segmentation/exported_masks/done_masks"

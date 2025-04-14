@@ -90,12 +90,12 @@ def test():
         val_tn += batch_tn.sum(dim=0)
 
         # просмотр фото с наложенными масками
-        # plt.figure(figsize=(12, 6))
-        # plt.imshow(result)
-        # plt.title("Segmentation")
-        # plt.show(block=False)
-        # plt.waitforbuttonpress()
-        # plt.close()
+        plt.figure(figsize=(12, 6))
+        plt.imshow(result)
+        plt.title("Segmentation")
+        plt.show(block=False)
+        plt.waitforbuttonpress()
+        plt.close()
 
     val_tp = val_tp.unsqueeze(0)
     val_fp = val_fp.unsqueeze(0)
