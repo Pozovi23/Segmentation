@@ -83,12 +83,12 @@ def tiff_to_png():
     i = 0
     for file in os.listdir(pictures_dir):
         image = cv2.imread(pictures_dir + file)
-        image = cv2.resize(image, (400, 400))
+        image = cv2.resize(image, (int(400 / 1500 * image.shape[1]), 400))
         cv2.imwrite(output_dir + f"{i}.png", image)
         i += 1
         if i == 4:
             break
-
+tiff_to_png()
 
 def delete_old_masks():
     path = "/home/gleb/learning/Segmentation/exported_masks/done_masks"

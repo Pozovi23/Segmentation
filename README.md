@@ -54,14 +54,17 @@ Loss / validation    |
 :-------------------------:|
 ![](https://github.com/Pozovi23/Segmentation/blob/master/readme_pictures/loss_validation.png)  |  
 
+IoU Road    |
+:-------------------------:|
+![](https://github.com/Pozovi23/Segmentation/blob/master/readme_pictures/iou_road.png)  |  
+
 ### Результаты на тестовом датасете
 
 Тесты проводились не на кропах 224х224, а на изначальных фото 1500х1500.
 
-|    |           |
-|------------|--------------------|
-| **IoU**    | 0.534  |
-| **F1-score**| 0.696  |
+|              |           |
+|--------------|--------------------|
+| **IoU road** | 0.516  |
 
 ![](https://github.com/Pozovi23/Segmentation/blob/master/segmentations/0.png) ![](https://github.com/Pozovi23/Segmentation/blob/master/segmentations/1.png)
 ![](https://github.com/Pozovi23/Segmentation/blob/master/segmentations/2.png) ![](https://github.com/Pozovi23/Segmentation/blob/master/segmentations/3.png)

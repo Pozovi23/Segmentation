@@ -4,7 +4,7 @@ import torch
 from torchvision import transforms
 
 
-def inference(model, picture_path, save_path, write=False):
+def inference(model, picture_path, save_path, label_path = "", write=False, draw_orig=False):
     img = cv2.imread(picture_path)
     img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     transform = transforms.Compose(
@@ -18,7 +18,7 @@ def inference(model, picture_path, save_path, write=False):
     crop_tensor = transform(img_rgb).unsqueeze(0).cuda()
     with torch.no_grad():
         crop_output = model(crop_tensor)
-        pred_mask = torch.sigmoid(crop_output).squeeze().cpu().numpy()
+        pred_mask = crop_output.squeeze().cpu().numpy()
         pred_mask = (pred_mask > 0.5).astype(np.uint8) * 255
 
     yellow_mask = np.zeros_like(img)
@@ -26,6 +26,14 @@ def inference(model, picture_path, save_path, write=False):
     img = cv2.imread(picture_path)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     result = cv2.addWeighted(img, 0.7, yellow_mask, 0.5, 0)
+
+    if draw_orig and label_path != "":
+        white_mask = np.zeros_like(img)
+        label = cv2.imread(label_path, cv2.IMREAD_GRAYSCALE)
+        border = np.zeros((img.shape[0], 10, 3), dtype=np.uint8)
+        white_mask[label == 255] = [255, 255, 255]
+        img = cv2.addWeighted(img, 0.7, white_mask, 0.5, 0)
+        result = np.hstack([result,border, img])
 
     if write:
         cv2.imwrite(save_path, result)
