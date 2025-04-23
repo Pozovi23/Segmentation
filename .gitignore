@@ -12,3 +12,10 @@ weights/
 runs/
 readme.odt
 __pycache__/
+текст.txt
+unet_resnet34.onnx
+unet_resnet34_2.onnx
+test_for_metrics.py
+output.csv
+output.ods
+output_black.ods
